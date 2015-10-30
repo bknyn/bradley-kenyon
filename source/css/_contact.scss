@@ -1,0 +1,17 @@
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: $space/2;
+  }
+  a {
+    color: $grey-light;
+    transition: color 0.2s ease-out;
+    &:hover {
+      color: $grey;
+    }
+  }
+}
