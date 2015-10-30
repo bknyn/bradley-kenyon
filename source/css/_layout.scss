@@ -49,11 +49,17 @@
 
 // Reusable layout conventions
 .third {
-  
   padding: 0 $space;
-
   @media (min-width: 480px) {
     width: 33.333%;
+    float: left;
+  }
+}
+
+.half {
+  padding: 0 $space;
+  @media (min-width: 480px) {
+    width: 50%;
     float: left;
   }
 }

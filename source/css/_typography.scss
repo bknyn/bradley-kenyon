@@ -24,6 +24,14 @@ a {
   text-decoration: none;
 }
 
+p a {
+  
+    display: inline-block;
+    color: $grey-light;
+    border-bottom: 1px solid $grey-lighter;
+  
+}
+
 p.intro {
   margin: 0;
 }
@@ -34,11 +42,7 @@ p.caption {
   font-weight: 400;
   font-style: italic;
   color: $grey-light;
-  a {
-    display: inline-block;
-    color: $grey-light;
-    border-bottom: 1px solid $grey-lighter;
-  }
+  
 }
 
 
