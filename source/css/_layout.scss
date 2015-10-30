@@ -23,6 +23,8 @@
   padding: $space;
   max-width: 680px;
   margin: 0 auto;
+
+  min-height: 100vh;
   
   @media (min-width: $full-layout) {
     max-width: 100%;
@@ -30,7 +32,6 @@
     padding-left: $space*2 + 115px;
   }
 }
-
 
 
 .section {
