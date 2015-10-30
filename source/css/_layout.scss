@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+}
+
+.sidebar-container {
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  @media (min-width: $full-layout) {
+    position: fixed;
+    width: 115px;
+    height: auto;
+  }
+}
+
+.content-container {
+  width: 100%;
+  padding: $space;
+  max-width: 680px;
+  margin: 0 auto;
+  
+  @media (min-width: $full-layout) {
+    max-width: 100%;
+    padding-top: 51px;
+    padding-left: $space*2 + 115px;
+  }
+}
+
+
+
+.section {
+  position: relative;
+  margin-bottom: $space*2;
+  margin-left: -$space;
+  margin-right: -$space;
+
+  .col {
+    position: relative;
+    padding: 0 $space;
+  }
+}
+
+
+
+// Reusable layout conventions
+.third {
+  
+  padding: 0 $space;
+  img { max-width: 100%; }
+
+  @media (min-width: 480px) {
+    width: 33.333%;
+    float: left;
+  }
+}
+
+.definition {
+  h2 {
+    margin-bottom: $space;
+
+    @media (min-width: 600px) {
+      position: absolute;
+      top: -2px;
+      left: $space;
+      width: 125px;
+    }
+  }
+
+  .content {
+    width: 100%;
+    @media (min-width: 600px) {
+      padding-left: 125px;
+    }
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li { margin-bottom: $space; }
+}

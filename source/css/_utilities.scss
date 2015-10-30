@@ -1,0 +1,34 @@
+html, body {
+  box-sizing: border-box;
+}
+
+
+// Since Typekit is loading async, this is a fix to stop the flash of unstyled text
+// It is heavy-handed, but will probably be fine for a project of such small size
+.wf-loading {
+  body { opacity: 0; }
+}
+.wf-active {
+  body {
+    opacity: 1.0;
+    transition: opacity 0.15s ease-out;
+  }
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

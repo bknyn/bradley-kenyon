@@ -1,0 +1,52 @@
+html, body {
+  font-family: 'proxima-nova', serif;
+  font-size: 11px;
+  line-height: 1.3em;
+  color: $grey;
+}
+
+h1 {
+  font-size: 12px;
+  line-height: $space*2.5;
+  font-weight: 800;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.intro {
+  margin: 0;
+}
+
+p.caption {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  color: $grey-light;
+}
+
+
+// For the definition sections
+.lead {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  color: $grey-light;
+}
+
+.description {
+  margin: 0;
+  padding-left: $space;
+}

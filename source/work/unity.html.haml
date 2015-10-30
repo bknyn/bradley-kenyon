@@ -1,0 +1,28 @@
+.section
+  .col
+    %h2 Unity
+    %p Around the office, Digital Telepathy's main website is affectionately known as Unity. During the most recent major redesign (Spring 2014), I was given the opportunity to be one of the primary developers on the project. Before being responsible for the code at the end of the project, I was invited to offer a developer's perspective to a good amount of the strategy and brainstorming sessions that led to the redesign.
+
+    %p When it came to the code, as we were starting from scratch, I was able to make a handful of technology decisions based on things our team had learned from maintaining the previous site's codebase. Eventually, I led the development team as we divyed up the work and constructed the redesign together so we could all be familiar with the new structure and conventions.
+
+
+.section.definition
+  .col
+    %h2 Some important things I learned
+    .content
+      %ul.takeaways
+        %li
+          %p.lead Make it better than last time
+          %p.description Leading into the project, the head of the development department and I agreed that the redesign provided a great opportunity for us to ditch the rarely-used CMS from the previous site and transition to a static site. The infrequent updates were already being handled by code-familiar individuals, so this transition primarily eased the load on the server and sped up the site. We also made sure to write a deploy script. Instead of looking up various credentials and remembering what systems to log in to, we could run a single command that would push edits to the repo, sync the changes with the server, and clear any server-side caches.
+
+        %li
+          %p.lead Imagine your work in the future
+          %p.description While prepping to write fresh code for the site, it was important to imagine how our team might feel about it 6 months in the future. In terms of file structure, I opted to shy away from generically named partials like "global" to keep code easy to find during future  maintenance visits. Also, we agreed to leave explanatory (and often humorous) comments in the code for anything that wasn't business-as-usual to ease ramp-up time when stumbling upon the pricklier pieces of the codebase.
+
+        %li
+          %p.lead Explore crazy ideas (or don't always say no)
+          %p.description One of my personal favorite sections of the site was a temporary piece for the initial launch until we had the bandwidth to execute the full idea. It was also one of the trickiest designs I'd had the pleasure of expressing in code (a mid-page, full-screen lava lamp takeover with scroll-controlled color evolution and smoothly updating content...oh, and it was responsive). I had no idea what the code might look like. Though the designer and I had made back-up plans, I broke it down, piece by piece, and figured out a way to make the section, as designed, a reality for the first month or two, at least.
+
+        %li
+          %p.lead Be honest about how long something might take, but be understanding when they ask for it sooner
+          %p.description Everybody is excited to see a web project come to life. Project stakeholders and people who don't write code might not always understand why they can't have something sooner.
