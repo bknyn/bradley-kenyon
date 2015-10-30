@@ -1,17 +1,19 @@
+- active_page = current_page.data.title.downcase.strip.gsub(' ', '-')
+
 .header
   %h1.me Bradley Kenyon
   %span.mobile-menu-toggle
     %span
 .nav
   %ul
-    %li= link_to "About", "/index.html"
+    %li= link_to "About", "/index.html", class: ("active" if active_page == 'about')
     %li
       Work
       %ul
-        %li= link_to "Unity (DT)", "/work/unity.html"
-        %li= link_to "Infobip", "/work/infobip.html"
-        %li= link_to "Pivotal", "/work/pivotal.html"
-        %li= link_to "Impress", "/work/impress.html"
-        %li= link_to "Then Be", "/work/then-be.html"
-        %li= link_to "Misc", "/work/misc.html"
-    %li= link_to "Contact", "/contact.html"
+        %li= link_to "Unity (DT)", "/work/unity.html", class: ("active" if active_page == 'unity')
+        %li= link_to "Infobip", "/work/infobip.html", class: ("active" if active_page == 'infobip')
+        %li= link_to "Pivotal", "/work/pivotal.html", class: ("active" if active_page == 'pivotal')
+        %li= link_to "Impress", "/work/impress.html", class: ("active" if active_page == 'impress')
+        %li= link_to "Then Be", "/work/then-be.html", class: ("active" if active_page == 'then-be')
+        %li= link_to "Misc", "/work/misc.html", class: ("active" if active_page == 'misc')
+    %li= link_to "Contact", "/contact.html", class: ("active" if active_page == 'contact')
