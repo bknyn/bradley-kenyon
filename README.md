@@ -37,5 +37,5 @@ rake build
 The site is hosted with Github Pages. By using the [middleman-gh-pages](https://github.com/edgecase/middleman-gh-pages) gem, deploying is as simple as running:
 
 ```bash
-rake deploy
+rake publish
 ```
