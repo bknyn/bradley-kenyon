@@ -1,5 +1,5 @@
 (function( $, window, undefined ){
-  var BradleyKenyon = {
+  var MobileNav = {
     elements: {},
 
     _bindEvents: function() {
@@ -8,12 +8,17 @@
       this.elements.mobileMenuLink.on('click', function(e) {
         var status = self.elements.body.data('mobile-menu');
         var newStatus = 'open';
-        
+
         if( status == 'open' ) {
           newStatus = 'closed';
         }
 
         self.elements.body.data('mobile-menu', newStatus).attr('data-mobile-menu', newStatus);
+      });
+
+      // For AJAX loading, close the mobile menu when a link is clicked
+      this.elements.pageLinks.on('click', function(e) {
+        self.elements.body.data('mobile-menu', 'closed').attr('data-mobile-menu', 'closed');
       });
     },
 
@@ -22,6 +27,7 @@
       this.elements.body = $('body');
 
       this.elements.mobileMenuLink = $('.mobile-menu-toggle');
+      this.elements.pageLinks = $('.nav a');
     },
 
     initialize: function() {
@@ -31,11 +37,11 @@
   };
 
   // Send to global namespace
-  window.BradleyKenyon = BradleyKenyon;
+  window.MobileNav = MobileNav;
 
   // Blastoff
   $(function(){
-    BradleyKenyon.initialize();
+    MobileNav.initialize();
   });
 
 })( jQuery, window, null );

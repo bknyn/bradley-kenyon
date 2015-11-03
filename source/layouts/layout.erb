@@ -21,16 +21,18 @@
     <%= javascript_include_tag  "main" %>
   </head>
 
-  <body class="<%= page_classes %>" data-mobile-menu="closed">
+  <body class="<%= page_classes %>" data-mobile-menu="closed" data-ajax-status="waiting">
     <div class="container clearfix">
       <div class="sidebar-container">
         <%= partial 'nav' %>
       </div>
 
+<div class="page-content">
       <div class="content-container">
         <%= yield %>
       </div>
     </div>
+</div>
 
     <%= partial 'analytics' if build? %>
   </body>

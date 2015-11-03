@@ -25,7 +25,10 @@
   margin: 0 auto;
 
   min-height: 100vh;
-  
+
+  opacity: 1.0;
+  visibility: visible;
+
   @media (min-width: $full-layout) {
     max-width: 100%;
     padding-top: 51px;
@@ -83,7 +86,7 @@
       padding-left: 125px;
     }
   }
-  
+
   ul {
     padding: 0;
     margin: 0;
@@ -91,4 +94,37 @@
   }
 
   li { margin-bottom: $space; }
+}
+
+
+// AJAX animations
+$transition-speed: 0.2s;
+body[data-ajax-status="transitioning"] {
+  .content-container {
+    &.stale {
+      opacity: 0;
+      visibility: hidden;
+
+      transition: opacity $transition-speed ease-out, visibility 0s ease-out $transition-speed;
+    }
+    &.upcoming {
+      opacity: 1.0;
+      visibility: visible;
+
+      transition: opacity $transition-speed ease-out;
+    }
+  }
+}
+
+body[data-ajax-status="waiting"] {
+  .content-container {
+    &.stale {
+      opacity: 1.0;
+      visibility: visible;
+    }
+    &.upcoming {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }
