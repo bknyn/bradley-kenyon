@@ -10,6 +10,9 @@
         var target = $(this).attr('href');
 
         self._getPageViaAjax(target);
+
+        // A little dangerous since we don't know yet if our ajax was successful...
+        self._updateLocation(target);
       });
 
       this.elements.container.find('.page-content').on( 'transitionend webkitTransitionEnd', function(e) {
@@ -46,7 +49,6 @@
       }).done( function(res) {
         self._prepStaleContent();
         self._parseResponse(res);
-        self._updateLocation(target);
       });
     },
 
