@@ -5,7 +5,30 @@ title: "Contact"
 .section
   .col
     %h2 Contact
-    %p If you'd like to get in touch, please don't hesitate to send an email to <a href="mailto:b@bradleykenyon.com">b@bradleykenyon.com</a>.
+    %p
+      If you'd like to get in touch, please don't hesitate to send me an email:
+      :javascript
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+        { coded = "t@tkriwsz9sVzIV.QI8"
+          key = "T2NA5obKdDGCREycgO9vleYaItJiPH3SxzQnqm1wsFrMu0UBfXpL67VZ8W4jhk"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+        document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+        }
+
 
     %p Alternatively, I can be found wandering around the social networks and services below. Feel free to reach out.
     %ul.social-links
