@@ -25,11 +25,11 @@ a {
 }
 
 p a {
-  
+
     display: inline-block;
     color: $grey-light;
     border-bottom: 1px solid $grey-lighter;
-  
+
 }
 
 p.intro {
@@ -42,7 +42,7 @@ p.caption {
   font-weight: 400;
   font-style: italic;
   color: $grey-light;
-  
+
 }
 
 
@@ -53,9 +53,18 @@ p.caption {
   text-transform: uppercase;
   margin: 0;
   color: $grey-light;
+  strong {
+    color: $grey;
+  }
 }
 
 .description {
   margin: 0;
   padding-left: $space;
+  strong {
+    // font-weight: 600;
+  }
+  em {
+    font-weight: 600;
+  }
 }
