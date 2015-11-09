@@ -65,7 +65,9 @@
     // Clean up the response from the server to get just the parts we need
     _parseResponse: function(result) {
       var self = this,
-          html = $.parseHTML(result);
+          html = $.parseHTML(result, document, true);
+
+          console.log(html);
 
       $.each(html, function(i, el) {
         if( el.nodeName == 'TITLE' ) {
