@@ -3,25 +3,44 @@
 
 // This file is .scss for more legible grid template areas
 
+// Wrapping layout
 .container {
-  padding-top: $space-var * 2;
   display: grid;
-  grid-template-columns: 1fr $logo-width-small;
+  grid-template-columns: 1fr;
+  grid-row-gap: $default-padding;
   grid-template-areas:
-    "title ."
-    "intro logo"
-    "specialities specialities"
-    "experience experience";
+    "hero"
+    "specialities"
+    "experience";
 
-  // Bit of a dangerous selector :/
-  // Adds default left/right padding so child sections can have full width bg colors
-  > * {
-    padding-left: $space-var * 2;
-    padding-right: $space-var * 2;
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr $logo-width-large repeat(2, auto) 1fr;
+    grid-template-areas:
+      ". hero hero hero ."
+      ". . experience specialities .";
   }
 }
 
-// Individual sections
+// Hero section
+.hero {
+  padding-left: $default-padding;
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 1fr $logo-width-small;
+  grid-column-gap: $default-padding;
+  grid-template-areas:
+    "title title"
+    "intro logo";
+
+  @media (min-width: $screen-lg) {
+    padding-left: 0;
+    grid-template-columns: $logo-width-large 1fr;
+    grid-template-areas:
+      "logo title"
+      "logo intro";
+  }
+}
+
 .logo {
   grid-area: logo;
   padding: 0;
@@ -29,11 +48,43 @@
 
 .title {
   grid-area: title;
+  padding-top: $default-padding;
 }
 
 .intro {
   grid-area: intro;
 }
+
+// Standard sections
+.standard-section {
+  padding: $default-padding;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section-content";
+
+  @media (min-width: $screen-med) {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: ". section-content .";
+  }
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "section-content";
+  }
+}
+
+.standard-section__inner {
+  grid-area: section-content;
+
+  @media (min-width: $screen-med) {
+    max-width: 700px; // TEMP for testing
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: 300px; // TEMP for testing
+  }
+}
+
 
 .experience {
   grid-area: experience;
@@ -42,4 +93,8 @@
 .specialities {
   grid-area: specialities;
   background-color: $alt-bg-color;
+
+  @media (min-width: $screen-lg) {
+    background-color: $bg-color;
+  }
 }

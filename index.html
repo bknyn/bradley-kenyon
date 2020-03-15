@@ -13,30 +13,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="logo">{% include monogram.svg %}</div>
-      <h1 class="title">title</h1>
-      <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequuntur sequi, magnam voluptatibus minus saepe odio accusantium et voluptatum minima obcaecati autem aliquid eos dicta quod odit error repellat esse!</p>
-
-      <div class="experience">
-        <section class="section">
-          <h2>{{ content.experience.heading }}</h2>
-          <ul class="section__content">
-            {% for entry in content.experience.entries %}
-              <li class="segment">
-                <h3>
-                  {{- entry.title -}}
-                  <span class="subtle segment__title--secondary">{{ entry.duration }}</span>
-                </h3>
-                <p class="segment__main-content">{{ entry.description }}</p>
-              </li>
-            {% endfor %}
-          </ul>
-        </section>
+      <div class="hero">
+        <div class="logo">{% include monogram.svg %}</div>
+        <h1 class="title">{{ content.intro.heading }}</h1>
+        <p class="intro">{{ content.intro.text }}</p>
       </div>
 
-      <div class="specialities section">
-        <h2>Specialities</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nemo recusandae corrupti rerum esse repudiandae, neque illum modi id quisquam ea nulla. Iure, a et nisi aliquam consectetur quos aut.</p>
+      <div class="experience standard-section">
+        <div class="standard-section__inner">
+          <section class="section">
+            <h2>{{ content.experience.heading }}</h2>
+            <ul class="section__content">
+              {% for entry in content.experience.entries %}
+                <li class="segment">
+                  <h3>
+                    {{- entry.title -}}
+                    <span class="subtle segment__title--secondary">{{ entry.duration }}</span>
+                  </h3>
+                  <p class="segment__main-content">{{ entry.description }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="specialities standard-section">
+        <div class="standard-section__inner">
+          <h2>Specialities</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nemo recusandae corrupti rerum esse repudiandae, neque illum modi id quisquam ea nulla. Iure, a et nisi aliquam consectetur quos aut.</p>
+        </div>
       </div>
     </div>
   </body>
