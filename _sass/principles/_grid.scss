@@ -1,0 +1,45 @@
+// File responsibilities:
+// overall page flow + bg colors
+
+// This file is .scss for more legible grid template areas
+
+.container {
+  padding-top: $space-var * 2;
+  display: grid;
+  grid-template-columns: 1fr $logo-width-small;
+  grid-template-areas:
+    "title ."
+    "intro logo"
+    "specialities specialities"
+    "experience experience";
+
+  // Bit of a dangerous selector :/
+  // Adds default left/right padding so child sections can have full width bg colors
+  > * {
+    padding-left: $space-var * 2;
+    padding-right: $space-var * 2;
+  }
+}
+
+// Individual sections
+.logo {
+  grid-area: logo;
+  padding: 0;
+}
+
+.title {
+  grid-area: title;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+.specialities {
+  grid-area: specialities;
+  background-color: $alt-bg-color;
+}
