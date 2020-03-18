@@ -21,29 +21,36 @@
 
       <div class="experience standard-section">
         <div class="standard-section__inner">
-          <section class="section">
+          <section>
             <h2>{{ content.experience.heading }}</h2>
-            <ul class="section__content">
+            <dl>
               {% for entry in content.experience.entries %}
-                <li class="segment">
-                  <h3>
-                    {{- entry.title -}}
-                    <span class="subtle segment__title--secondary">{{ entry.duration }}</span>
-                  </h3>
-                  <p class="segment__main-content">{{ entry.description }}</p>
-                </li>
+                <dt>
+                  <h3>{{entry.title}}<span>{{ entry.duration }}</span></h3>
+                </dt>
+                <dd>{{ entry.description }}</dd>
               {% endfor %}
-            </ul>
+            </dl>
           </section>
         </div>
       </div>
 
       <div class="specialities standard-section">
         <div class="standard-section__inner">
-          <h2>Specialities</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nemo recusandae corrupti rerum esse repudiandae, neque illum modi id quisquam ea nulla. Iure, a et nisi aliquam consectetur quos aut.</p>
+          <section>
+            <h2>{{ content.specialities.heading }}</h2>
+            <dl>
+              {% for entry in content.specialities.entries %}
+                <dt>
+                  <h3>{{ entry.title }}</h3>
+                </dt>
+                <dd>{{ entry.description }}</dd>
+              {% endfor %}
+            </dl>
+          </section>
         </div>
       </div>
+
     </div>
   </body>
 </html>
