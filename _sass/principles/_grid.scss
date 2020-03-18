@@ -57,7 +57,8 @@
 
 // Standard sections
 .standard-section {
-  padding: $default-padding;
+  padding-left: $default-padding;
+  padding-right: $default-padding;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "section-content";
@@ -93,6 +94,8 @@
 .specialities {
   grid-area: specialities;
   background-color: $alt-bg-color;
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
 
   @media (min-width: $screen-lg) {
     background-color: $bg-color;
