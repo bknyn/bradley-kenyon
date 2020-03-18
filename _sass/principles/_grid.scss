@@ -3,6 +3,10 @@
 
 // This file is .scss for more legible grid template areas
 
+body {
+  margin: 0;
+}
+
 // Wrapping layout
 .container {
   display: grid;
