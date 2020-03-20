@@ -5,6 +5,10 @@
 
 body {
   margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 // Wrapping layout
@@ -22,9 +26,10 @@ body {
   @media (min-width: $screen-lg) {
     grid-template-columns: 1fr $logo-width-large repeat(2, auto) 1fr;
     grid-template-areas:
-      ". hero hero hero ."
+      ". hero hero . ."
       ". . experience specialities ."
-      ". . skills contact .";
+      ". . skills skills ."
+      ". . contact . .";
   }
 }
 
@@ -39,12 +44,22 @@ body {
     "title title"
     "intro logo";
 
-  @media (min-width: $screen-lg) {
-    padding-left: 0;
+  @media (min-width: $screen-sm) {
+    margin: 0 auto;
     grid-template-columns: $logo-width-large 1fr;
     grid-template-areas:
       "logo title"
       "logo intro";
+  }
+
+  @media (min-width: $screen-med) {
+    padding-left: 0;
+    max-width: $med-column-width;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: 0;
+    max-width: $logo-width-large + $default-padding + $lg-column-width;
   }
 }
 
@@ -85,11 +100,13 @@ body {
   grid-area: section-content;
 
   @media (min-width: $screen-med) {
-    max-width: 700px; // TEMP for testing
+    max-width: $med-column-width;
   }
 
   @media (min-width: $screen-lg) {
-    max-width: 300px; // TEMP for testing
+    max-width: $lg-column-width;
+    padding-top: $default-padding;
+    padding-bottom: $default-padding;
   }
 }
 
@@ -106,6 +123,8 @@ body {
 
   @media (min-width: $screen-lg) {
     background-color: $bg-color;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -117,6 +136,8 @@ body {
 
   @media (min-width: $screen-lg) {
     background-color: $bg-color;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
