@@ -1,0 +1,151 @@
+// File responsibilities:
+// overall page flow + bg colors
+
+// This file is .scss for more legible grid template areas
+
+body {
+  margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+// Wrapping layout
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: $default-padding;
+  grid-template-areas:
+    "hero"
+    "specialities"
+    "experience"
+    "skills"
+    "contact";
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr $logo-width-large repeat(2, auto) 1fr;
+    grid-template-areas:
+      ". hero hero . ."
+      ". . experience specialities ."
+      ". . skills skills ."
+      ". . contact . .";
+  }
+}
+
+// Hero section
+.hero {
+  padding-left: $default-padding;
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 1fr $logo-width-small;
+  grid-column-gap: $default-padding;
+  grid-template-areas:
+    "title title"
+    "intro logo";
+
+  @media (min-width: $screen-sm) {
+    margin: 0 auto;
+    grid-template-columns: $logo-width-large 1fr;
+    grid-template-areas:
+      "logo title"
+      "logo intro";
+  }
+
+  @media (min-width: $screen-med) {
+    padding-left: 0;
+    max-width: $med-column-width;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin: 0;
+    max-width: $logo-width-large + $default-padding + $lg-column-width;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  padding: 0;
+}
+
+.title {
+  grid-area: title;
+  padding-top: $default-padding;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+// Standard sections
+.standard-section {
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section-content";
+
+  @media (min-width: $screen-med) {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: ". section-content .";
+  }
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "section-content";
+  }
+}
+
+.standard-section__inner {
+  grid-area: section-content;
+
+  @media (min-width: $screen-med) {
+    max-width: $med-column-width;
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: $lg-column-width;
+    padding-top: $default-padding;
+    padding-bottom: $default-padding;
+  }
+}
+
+
+.experience {
+  grid-area: experience;
+}
+
+.specialities {
+  grid-area: specialities;
+  background-color: $alt-bg-color;
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+
+  @media (min-width: $screen-lg) {
+    background-color: $bg-color;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.skills {
+  grid-area: skills;
+  background-color: $alt-bg-color;
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+
+  @media (min-width: $screen-lg) {
+    background-color: $bg-color;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.contact {
+  grid-area: contact;
+  margin-bottom: $default-padding;
+
+  p {
+    padding-left: $default-padding;
+  }
+}
