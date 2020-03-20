@@ -16,6 +16,10 @@ bundle install
 
 TODO:: update this section
 
+### Partials/Includes
+
+TODO:: document how to include individual partials
+
 ## Building
 
 TODO:: update this section

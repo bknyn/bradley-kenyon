@@ -1,0 +1,17 @@
+{%- assign section_content = include.content -%}
+
+<div class="standard-section {{ include.wrapping_class }}">
+  <div class="standard-section__inner">
+    <section>
+      <h2>{{ section_content.heading }}</h2>
+      <dl>
+        {% for entry in section_content.entries %}
+          <dt>
+            <h3>{{entry.title}}<span>{{ entry.duration }}</span></h3>
+          </dt>
+          <dd>{{ entry.description }}</dd>
+        {% endfor %}
+      </dl>
+    </section>
+  </div>
+</div>

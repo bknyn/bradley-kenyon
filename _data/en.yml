@@ -34,3 +34,15 @@ specialities:
       description: Whether running a growth marketing initiative or settling an intrateam stylistic dispute, I believe in letting objective data be the guide. After identifying key metrics, I collect and analyze the data, let the results inform any decisions, and then start the process again.
     - title: Rampant Curiosity
       description: As a friend of new ideas, I’m always excited to learn about and try new technologies, tools, or ways of thinking about problems. This has also produced a broad spectrum of personal knowledge that I can draw from to help solve problems.
+skills:
+  heading: Skills & Tools
+  entries:
+    - title: Skills
+      description: Effective communiation based on audience, Attention to detail & organization, Adaptibility, Drive to make things better, Scrum & Agile, DRY & modular code, Object-oriented programming
+    - title: Tools
+      description: HTML & templating systmes (HAML, Handlebars, etc...), CSS & preprocessors (SASS, LESS, etc...), JavaScript & JS libraries (React, jQuery, etc...), Node & NPM/Yarn, Backend languages (Ruby, PHP, etc...), Backend frameworks (Ruby on Rails, Wordpress, etc...), Git, Design tools (Adobe CC, InVision, etc...), Spreadsheets
+contact:
+  heading: Contact
+  paragraphs:
+    - "To contact me, please email: <strong>b@bradleykenyon.com</strong>"
+    - References available by request.

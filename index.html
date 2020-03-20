@@ -19,59 +19,28 @@
         <p class="intro">{{ content.intro.text }}</p>
       </div>
 
-      <div class="experience standard-section">
-        <div class="standard-section__inner">
-          <section>
-            <h2>{{ content.experience.heading }}</h2>
-            <dl>
-              {% for entry in content.experience.entries %}
-                <dt>
-                  <h3>{{entry.title}}<span>{{ entry.duration }}</span></h3>
-                </dt>
-                <dd>{{ entry.description }}</dd>
-              {% endfor %}
-            </dl>
-          </section>
-        </div>
-      </div>
+      <!-- Experience & Education -->
+      {% include standard-section.html
+         wrapping_class="experience"
+         content=content.experience %}
 
-      <div class="specialities standard-section">
-        <div class="standard-section__inner">
-          <section>
-            <h2>{{ content.specialities.heading }}</h2>
-            <dl>
-              {% for entry in content.specialities.entries %}
-                <dt>
-                  <h3>{{ entry.title }}</h3>
-                </dt>
-                <dd>{{ entry.description }}</dd>
-              {% endfor %}
-            </dl>
-          </section>
-        </div>
-      </div>
+      <!-- Specialities -->
+      {% include standard-section.html
+         wrapping_class="specialities"
+         content=content.specialities %}
 
-      <div class="skills standard-section">
-        <div class="standard-section__inner">
-          <section>
-            <h2>Skills & Tools</h2>
-            <dl>
-              <dt><h3>Skills</h3></dt>
-              <dd>Effective communiation based on audience, Attention to detail & organization, Adaptibility, Drive to make things better, Scrum & Agile, DRY & modular code, Object-oriented programming</dd>
-              <dt><h3>Tools</h3></dt>
-              <dd>HTML & templating systmes (HAML, Handlebars, etc...), CSS & preprocessors (SASS, LESS, etc...), JavaScript & JS libraries (React, jQuery, etc...), Node & NPM/Yarn, Backend languages (Ruby, PHP, etc...), Backend frameworks (Ruby on Rails, Wordpress, etc...), Git, Design tools (Adobe CC, InVision, etc...), Spreadsheets</dd>
-            </dl>
-          </section>
-        </div>
-      </div>
+      <!-- Skills -->
+      {% include standard-section.html
+         wrapping_class="skills"
+         content=content.skills %}
 
       <div class="contact standard-section">
         <div class="standard-section__inner">
           <section>
-            <h2>Contact</h2>
-            <p>To contact me, please email: b@bradleykenyon.com</p>
-            <p>A PDF version of my resume is available at this link: http://bradleykenyon.com/bradley-kenyon-resume.pdf</p>
-            <p>References available by request.</p>
+            <h2>{{ content.contact.heading }}</h2>
+            {% for paragraph in content.contact.paragraphs %}
+              <p>{{ paragraph }}</p>
+            {% endfor %}
           </section>
         </div>
       </div>
