@@ -15,13 +15,16 @@ body {
   grid-template-areas:
     "hero"
     "specialities"
-    "experience";
+    "experience"
+    "skills"
+    "contact";
 
   @media (min-width: $screen-lg) {
     grid-template-columns: 1fr $logo-width-large repeat(2, auto) 1fr;
     grid-template-areas:
       ". hero hero hero ."
-      ". . experience specialities .";
+      ". . experience specialities ."
+      ". . skills contact .";
   }
 }
 
@@ -103,5 +106,25 @@ body {
 
   @media (min-width: $screen-lg) {
     background-color: $bg-color;
+  }
+}
+
+.skills {
+  grid-area: skills;
+  background-color: $alt-bg-color;
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+
+  @media (min-width: $screen-lg) {
+    background-color: $bg-color;
+  }
+}
+
+.contact {
+  grid-area: contact;
+  margin-bottom: $default-padding;
+
+  p {
+    padding-left: $default-padding;
   }
 }
