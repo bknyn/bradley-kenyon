@@ -6,7 +6,7 @@ experience:
   heading: Experience & Education
   entries:
     - title: Freelance
-      duration: Ongoing
+      duration: Present
       description: Working independently. Producing full-stack design and development, UX and strategic consultation, and printed materials for client and personal projects.
     - title: Varsity Tutors
       duration: Jan 2016 – Apr 2019
@@ -29,11 +29,11 @@ specialities:
     - title: Translating between Design and Development
       description: Often serving as a liaison between design and development teams, my background in both helps me foster communication between the two. I effectively help explain the root concerns and goals for each side to arrive at solutions that work for all.
     - title: Strategic Thinking & Technical Architecture
-      description: Recalling past pain points and anticipating future opportunities simultaneously is one of my core strengths, I have a knack for selecting the right suite of technologies and strategies to meet today’s goals and ease tomorrow’s maintenance.
+      description: Recalling past pain points and anticipating future opportunities simultaneously is one of my core strengths. I have a knack for selecting the right suite of technologies and strategies to meet today’s goals and ease tomorrow’s maintenance.
     - title: Data-informed Thinking
       description: Whether running a growth marketing initiative or settling an intrateam stylistic dispute, I believe in letting objective data be the guide. After identifying key metrics, I collect and analyze the data, let the results inform any decisions, and then start the process again.
     - title: Rampant Curiosity
-      description: As a friend of new ideas, I’m always excited to learn about and try new technologies, tools, or ways of thinking about problems. This has also produced a broad spectrum of personal knowledge that I can draw from to help solve problems.
+      description: As a friend of new ideas, I’m always excited to learn about and try new technologies, tools, or ways of thinking about problems. This has also produced a broad spectrum of personal knowledge from which I can draw to help solve problems.
 skills:
   heading: Skills & Tools
   entries:
@@ -45,4 +45,5 @@ contact:
   heading: Contact
   paragraphs:
     - "To contact me, please email: <strong>b@bradleykenyon.com</strong>"
+    - "PDF resume: <a target=\"_blank\" href=\"http://bradleykenyon.com/bradley-kenyon-resume.pdf\">http://bradleykenyon.com/bradley-kenyon-resume.pdf</a>"
     - References available by request.
