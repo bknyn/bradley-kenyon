@@ -1,29 +1,23 @@
 # Bradley Kenyon
 
-Source code for personal portfolio site: bradleykenyon.com
+Source code for personal site, [bradleykenyon.com](https://bradleykenyon.com), built with [next.js](https://nextjs.org/).
 
-## Requirements
+## Setup
 
-TODO:: update this section
+### Requirements
+- Node (`v13.14.0`)
+- Yarn (`1.22.4`)
 
-## Project Setup
+### Installing and Running
 
-```bash
-bundle install
+After cloning and `cd`ing into the project, install the dependencies:
+```
+yarn install
 ```
 
-## Development
+Then start the dev server:
+```
+yarn dev
+```
 
-TODO:: update this section
-
-### Partials/Includes
-
-TODO:: document how to include individual partials
-
-## Building
-
-TODO:: update this section
-
-## Deploying
-
-TODO:: update this section
+You should now be able to view the site at localhost:3000
