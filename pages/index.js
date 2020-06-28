@@ -1,5 +1,5 @@
-const Homepage = () => {
-  return <h1>init setup</h1>
-}
+const Homepage = () => (
+  <h1>init setup</h1>
+);
 
-export default Homepage
+export default Homepage;
