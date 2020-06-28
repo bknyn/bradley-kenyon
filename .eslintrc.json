@@ -23,6 +23,7 @@
     "react/forbid-prop-types": [1, {"forbid": ["any", "array"]}],
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
     "react/jsx-props-no-spreading": "off",
+    "react/no-danger": "off",
     "react/react-in-jsx-scope": "off"
   }
 }
