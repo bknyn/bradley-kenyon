@@ -73,5 +73,13 @@
         "description": "HTML & templating systmes (HAML, Handlebars, etc...), CSS & preprocessors (SASS, LESS, etc...), JavaScript & JS libraries (React, jQuery, etc...), Node & NPM/Yarn, Backend languages (Ruby, PHP, etc...), Backend frameworks (Ruby on Rails, Wordpress, etc...), Git, Design tools (Adobe CC, InVision, etc...), Spreadsheets"
       }
     ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "paragraphs": [
+      "To contact me, please email: <strong>b@bradleykenyon.com</strong>",
+      "PDF resume: <a target=\"_blank\" href=\"http://bradleykenyon.com/bradley-kenyon-resume.pdf\">http://bradleykenyon.com/bradley-kenyon-resume.pdf</a>",
+      "References available by request."
+    ]
   }
 }

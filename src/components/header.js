@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import Monogram from './monogram';
-import styles from '../styles/components/header.module.css';
 
 const Header = ({ content }) => (
-  <div className={styles.header}>
-    <Monogram />
-    <h1>{content.heading}</h1>
-    <p dangerouslySetInnerHTML={{ __html: content.text }} />
+  <div className="header">
+    <div className="logo">
+      <Monogram />
+    </div>
+    <h1 className="title">{content.heading}</h1>
+    <p className="intro" dangerouslySetInnerHTML={{ __html: content.text }} />
   </div>
 );
 
