@@ -40,13 +40,13 @@ const Index = ({ resume }) => (
   </>
 );
 
-export const getStaticProps = async () => {
-  return {
+export const getStaticProps = async () => (
+  {
     props: {
       resume: resumeContent
     }
-  };
-};
+  }
+);
 
 Index.propTypes = {
   resume: PropTypes.shape({
