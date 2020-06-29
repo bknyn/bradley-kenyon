@@ -1,0 +1,81 @@
+.contentSection {
+  padding-left: var(--gridGutter);
+  padding-right: var(--gridGutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section-content";
+}
+
+@media (min-width: env(--screenMd)) {
+  .contentSection {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: ". section-content .";
+  }
+}
+
+@media (min-width: env(--screenLg)) {
+  .contentSection {
+    grid-template-columns: 1fr;
+    grid-template-areas: "section-content";
+  }
+}
+
+.contentSectionInner {
+  grid-area: section-content;
+}
+
+@media (min-width: env(--screenMd)) {
+  .contentSectionInner {
+    max-width: 680px;
+  }
+}
+
+@media (min-width: env(--screenLg)) {
+  .contentSectionInner {
+    max-width: 440px;
+    padding-top: var(--gridGutter);
+    padding-bottom: var(--gridGutter);
+  }
+}
+
+/* Specific sections */
+.experience { grid-area: experience; }
+
+.specialities {
+  grid-area: specialities;
+  background-color: var(--altBgColor);
+  padding-top: var(--gridGutter);
+  padding-bottom: var(--gridGutter);
+}
+
+@media (min-width: env(--screenLg)) {
+  .specialities {
+    background-color: var(--bgColor);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.skills {
+  grid-area: skills;
+  background-color: var(--altBgColor);
+  padding-top: var(--gridGutter);
+  padding-bottom: var(--gridGutter);
+}
+
+@media (min-width: env(--screenLg)) {
+  .skills {
+    background-color: var(--bgColor);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.contact {
+  grid-area: contact;
+  margin-bottom: var(--gridGutter);
+}
+
+.contact p {
+  padding-left: var(--gridGutter);
+}
