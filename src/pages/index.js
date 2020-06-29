@@ -29,7 +29,10 @@ const Index = ({ resume }) => (
         <div className="standard-section__inner">
           <h2>{resume.contact.heading}</h2>
           {resume.contact.paragraphs.map((paragraph) => (
-            <p dangerouslySetInnerHTML={{ __html: paragraph }} />
+            <p
+              key={paragraph}
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
         </div>
       </div>
