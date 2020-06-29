@@ -1,35 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from '../styles/components/contentSection.module.css';
 
-const ContentSection = ({ sectionClass, content }) => (
-  <div className={`standard-section ${sectionClass}`}>
-    <div className="standard-section__inner">
-      <h2>{content.heading}</h2>
-      <dl>
-        {content.entries.map((entry) => (
-          <React.Fragment key={entry.title}>
-            <dt>
-              <h3>
-                {entry.title}
-                {entry.duration && (
-                  <span>{entry.duration}</span>
-                )}
-              </h3>
-            </dt>
-            <dd dangerouslySetInnerHTML={{ __html: entry.description }} />
-          </React.Fragment>
-        ))}
-      </dl>
+const ContentSection = ({ sectionClass, sectionHeading, children }) => (
+  <div className={`${styles.contentSection} ${styles[sectionClass]}`}>
+    <div className={styles.contentSectionInner}>
+      <h2>{sectionHeading}</h2>
+      {children}
     </div>
   </div>
 );
 
 ContentSection.propTypes = {
   sectionClass: PropTypes.string.isRequired,
-  content: PropTypes.shape({
-    heading: PropTypes.string,
-    entries: PropTypes.array
-  }).isRequired
+  sectionHeading: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 };
 
 export default ContentSection;

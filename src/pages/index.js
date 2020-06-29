@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Header from '../components/header';
 import ContentSection from '../components/contentSection';
+import DefinitionList from '../components/definitionList';
 import resumeContent from '../resume-content.json';
 
 const Index = ({ resume }) => (
@@ -12,30 +13,27 @@ const Index = ({ resume }) => (
     </Head>
     <main className="container">
       <Header content={resume.header} />
-      <ContentSection
-        sectionClass="experience"
-        content={resume.experience}
-      />
-      <ContentSection
-        sectionClass="specialities"
-        content={resume.specialities}
-      />
-      <ContentSection
-        sectionClass="skills"
-        content={resume.skills}
-      />
 
-      <div className="standard-section contact">
-        <div className="standard-section__inner">
-          <h2>{resume.contact.heading}</h2>
-          {resume.contact.paragraphs.map((paragraph) => (
-            <p
-              key={paragraph}
-              dangerouslySetInnerHTML={{ __html: paragraph }}
-            />
-          ))}
-        </div>
-      </div>
+      <ContentSection sectionClass="experience" sectionHeading={resume.experience.heading}>
+        <DefinitionList entries={resume.experience.entries} />
+      </ContentSection>
+
+      <ContentSection sectionClass="specialities" sectionHeading={resume.specialities.heading}>
+        <DefinitionList entries={resume.specialities.entries} />
+      </ContentSection>
+
+      <ContentSection sectionClass="skills" sectionHeading={resume.skills.heading}>
+        <DefinitionList entries={resume.skills.entries} />
+      </ContentSection>
+
+      <ContentSection sectionClass="contact" sectionHeading={resume.contact.heading}>
+        {resume.contact.paragraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
+        ))}
+      </ContentSection>
     </main>
   </>
 );
