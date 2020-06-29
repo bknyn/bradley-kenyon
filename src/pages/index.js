@@ -4,6 +4,7 @@ import Header from '../components/header';
 import ContentSection from '../components/contentSection';
 import DefinitionList from '../components/definitionList';
 import resumeContent from '../resume-content.json';
+import grid from '../styles/components/grid.module.css';
 
 const Index = ({ resume }) => (
   <>
@@ -11,7 +12,7 @@ const Index = ({ resume }) => (
       <title>{resume.title}</title>
       <meta name="description" content={resume.description} />
     </Head>
-    <main className="container">
+    <main className={grid.container}>
       <Header content={resume.header} />
 
       <ContentSection sectionClass="experience" sectionHeading={resume.experience.heading}>

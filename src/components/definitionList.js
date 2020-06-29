@@ -1,19 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from '../styles/components/definitionList.module.css';
 
 const DefinitionList = ({ entries }) => (
-  <dl>
+  <dl className={styles.list}>
     {entries.map((entry) => (
       <React.Fragment key={entry.title}>
         <dt>
-          <h3>
+          <h3 className={styles.heading}>
             {entry.title}
             {entry.duration && (
-              <span>{entry.duration}</span>
+              <span className={styles.subHeading}>{entry.duration}</span>
             )}
           </h3>
         </dt>
-        <dd dangerouslySetInnerHTML={{ __html: entry.description }} />
+        <dd
+          className={styles.definition}
+          dangerouslySetInnerHTML={{ __html: entry.description }}
+        />
       </React.Fragment>
     ))}
   </dl>
