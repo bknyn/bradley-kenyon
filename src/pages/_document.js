@@ -4,6 +4,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document';
+import GoogleAnalytics from '../components/googleAnalytics';
 import RootCSSVars from '../components/rootCSSVars';
 
 class CustomDocument extends Document {
@@ -11,6 +12,9 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {process.env.BUILD_ENV === 'production' && (
+            <GoogleAnalytics />
+          )}
           <link rel="icon" href="/favicon.ico" />
           <link href="https://use.typekit.net/kna4wmf.css" rel="stylesheet" />
           <RootCSSVars />
