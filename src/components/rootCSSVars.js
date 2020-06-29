@@ -4,9 +4,8 @@ import {
 } from '../styles/variables';
 
 const RootCSSVars = () => {
-  // TODO:: update font size on html to something reasonable
-  // Expects font-size to be set at 11px
-  const toRem = (pxValue) => `${pxValue / 11}rem`;
+  // Expects font-size to be set at 16px
+  const toRem = (pxValue) => `${pxValue / 16}rem`;
 
   const convertToCSSString = (obj, pxToRem = false) => (
     Object.entries(obj).map((current) => {
