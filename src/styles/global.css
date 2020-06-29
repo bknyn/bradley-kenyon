@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  color: var(--darkGrey);
   font-family: proxima-nova, sans-serif;
   font-size: 16px;
 }
@@ -96,59 +97,6 @@ dd:last-of-type { margin-bottom: 0; }
       ". . contact . .";
   }
 }
-
-/* Header section */
-.header {
-  padding-left: var(--gridGutter);
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 56px;
-  grid-column-gap: var(--gridGutter);
-  grid-template-areas:
-    "title title"
-    "intro logo";
-}
-
-@media (min-width: env(--screenSm)) {
-  .header {
-    margin: 0 auto;
-    grid-template-columns: 66px 1fr;
-    grid-template-areas:
-      "logo title"
-      "logo intro";
-  }
-}
-
-@media (min-width: env(--screenMd)) {
-  .header {
-    padding-left: 0;
-    /* max-width: $med-column-width; */
-    max-width: 680px;
-  }
-}
-
-@media (min-width: env(--screenLg)) {
-  .header {
-    margin: 0;
-    /* max-width: $logo-width-large + $default-padding + $lg-column-width; */
-    max-width: calc(66px + var(--gridGutter) + 440px);
-  }
-}
-
-.logo {
-  grid-area: logo;
-  padding: 0;
-}
-
-.title {
-  grid-area: title;
-  padding-top: var(--gridGutter);
-}
-
-.intro {
-  grid-area: intro;
-}
-
 
 /* Standard sections */
 .standard-section {
