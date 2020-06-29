@@ -1,0 +1,27 @@
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.heading {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subHeading {
+  color: var(--lightGrey);
+  font-weight: 400;
+  margin-left: var(--spacer);
+  text-transform: none;
+}
+
+.definition {
+  margin-left: var(--gridGutter);
+  margin-bottom: var(--gridGutter);
+}
+
+.definition:last-of-type { margin-bottom: 0; }
