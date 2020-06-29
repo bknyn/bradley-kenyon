@@ -1,4 +1,4 @@
-import { colors } from '../styles/variables';
+import colors from '../styles/variables/colors';
 
 const Monogram = () => (
   <svg viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">

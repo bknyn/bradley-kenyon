@@ -1,7 +1,5 @@
-import {
-  colors,
-  spacing
-} from '../styles/variables';
+import colors from '../styles/variables/colors';
+import spacing from '../styles/variables/spacing';
 
 const RootCSSVars = () => {
   // Expects font-size to be set at 16px

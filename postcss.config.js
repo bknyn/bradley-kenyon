@@ -12,7 +12,7 @@ module.exports = {
     },
     'postcss-env-function': {
       importFrom: [
-        './src/styles/breakpoints.js'
+        './src/styles/variables/breakpoints.js'
       ]
     }
   },
